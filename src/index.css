@@ -1,0 +1,17 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --primary: #202020;
+  --black: #151515;
+  --white: #ffffff;
+  --marvel: #e62429;
+  --border: #87878791;
+}
+
+body {
+  font-family: "Almarai", serif;
+  font-weight: 700;
+}
