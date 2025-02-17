@@ -1,0 +1,13 @@
+.top-nav .navbar {
+  padding: 0px;
+  background-color: var(--primary) !important;
+}
+
+.top-nav .navbar .nav-link {
+  color: var(--gray);
+  font-size: 11px;
+}
+
+.top-nav .navbar .nav-link:hover {
+  color: var(--marvel);
+}

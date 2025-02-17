@@ -9,9 +9,15 @@
   --white: #ffffff;
   --marvel: #e62429;
   --border: #87878791;
+  --gray: gray;
 }
 
 body {
   font-family: "Almarai", serif;
   font-weight: 700;
+}
+
+.active {
+  color: var(--marvel) !important;
+  border-bottom: 4px solid var(--marvel);
 }

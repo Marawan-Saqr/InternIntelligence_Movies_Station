@@ -1,8 +1,6 @@
 import './TopLogo.css';
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
+import {Container, Navbar, Nav} from 'react-bootstrap';
 
 
 const TopLogo = () => {
