@@ -1,5 +1,5 @@
 .home-cover {
-  background-image: url("home-cover.jpg");
+  background-image: url("/home-cover.jpg");
   height: 60vh;
   background-size: cover;
   position: relative;
