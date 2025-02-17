@@ -11,3 +11,22 @@
 .top-nav .navbar .nav-link:hover {
   color: var(--marvel);
 }
+
+.top-nav .navbar .navbar-toggler {
+  background-color: #fff;
+  margin: 5px 0px;
+}
+
+
+@media (max-width: 767px) {
+  .top-nav .container {
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .top-nav .container {
+    justify-content: flex-end;
+  }
+}
+
