@@ -1,0 +1,86 @@
+.watch-now {
+  background-image: url("/mid-cover.jpeg");
+  height: 60vh;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.watch-now::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 3;
+}
+
+.watch-now .content {
+  position: relative;
+  z-index: 50;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .watch-now .content {
+    text-align: center;
+  }
+}
+
+.watch-now .content img {
+  width: 160px;
+}
+
+.watch-now .content h2 {
+  margin: 5px 0px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.watch-now .content h2 span {
+  color: var(--marvel);
+}
+
+.watch-now .content p {
+  margin: 0px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+.watch-now .content button {
+  background-color: var(--marvel);
+  color: #fff !important;
+  padding: 5px 20px;
+  text-transform: uppercase;
+  transform: skewX(-20deg) !important;
+  -webkit-transform: skewX(-20deg) !important;
+  -moz-transform: skewX(-20deg) !important;
+  -ms-transform: skewX(-20deg) !important;
+  -o-transform: skewX(-20deg) !important;
+  border: none;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.watch-now .content button:hover {
+  background-color: #8d070b;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.watch-now .content button a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
