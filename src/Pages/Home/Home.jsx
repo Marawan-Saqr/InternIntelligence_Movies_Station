@@ -5,6 +5,7 @@ import WatchNow from '../../Components/Watch_now/WatchNow.jsx';
 import LatestShow from '../../Components/Latest_shows/LatestShow.jsx';
 import MarvelMovies from '../../Components/Marvel_movies/MarvelMovies.jsx';
 import UpcomingMovies from '../../Components/Upcoming_movies/UpcomingMovies.jsx';
+import Unlimited from '../../Components/Unlimited/Unlimited.jsx';
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <LatestShow />
       <MarvelMovies />
       <UpcomingMovies />
+      <Unlimited />
     </div>
   )
 }
