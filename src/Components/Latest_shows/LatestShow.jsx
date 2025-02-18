@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { movieContext } from '../../Contexts/MovieContext.jsx';
 import { Container, Row, Col } from 'react-bootstrap';
-import LatestShowCard from '../../Components/Latest_shows/Latest-show-card/LatestShowCard.jsx';
+import LatestShowCard from '../../Components/Latest_shows/Latest_show_card/LatestShowCard.jsx';
 import './LatestShow.css';
 import Loading from '../../Components/Loading/Loading.jsx';
 

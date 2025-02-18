@@ -4,6 +4,7 @@ import NewMovies from '../../Components/New_movies/NewMovies.jsx';
 import WatchNow from '../../Components/Watch_now/WatchNow.jsx';
 import LatestShow from '../../Components/Latest_shows/LatestShow.jsx';
 import MarvelMovies from '../../Components/Marvel_movies/MarvelMovies.jsx';
+import UpcomingMovies from '../../Components/Upcoming_movies/UpcomingMovies.jsx';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <WatchNow />
       <LatestShow />
       <MarvelMovies />
+      <UpcomingMovies />
     </div>
   )
 }

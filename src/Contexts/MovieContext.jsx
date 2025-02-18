@@ -11,6 +11,7 @@ const MovieContextProvider = ({ children }) => {
   const [movies, setMovies] = useState([]);
   const [shows, setShows] = useState([]);
   const [marvel, setMarvel] = useState([]);
+  const [upcoming, setUpcoming] = useState([]);
   const [loading, setLoading] = useState(true);
 
 
@@ -38,16 +39,25 @@ const MovieContextProvider = ({ children }) => {
   }
 
 
+  // Get All Upcoming Movies
+  const getAllUpcomingMovies = async () => {
+    const response = await axios.get("https://api.themoviedb.org/3/movie/upcoming?api_key=cc77dc99cfe3060cfe5410df352d4c7d&language=en");
+    setUpcoming(response.data.results);
+    setLoading(false);
+  }
+
+
   // UseEffect
   useEffect(()=> {
     getAllMovies();
     getAllShows();
     getAllMarvelMovies();
+    getAllUpcomingMovies();
   }, [])
 
 
   return (
-    <movieContext.Provider value={{ movies, shows, marvel, loading }}>
+    <movieContext.Provider value={{ movies, shows, marvel, upcoming, loading }}>
       {children}
     </movieContext.Provider>
   )
