@@ -1,0 +1,7 @@
+footer {
+  background-color: var(--primary);
+}
+
+footer .box ul li a {
+  color: #fff;
+}
