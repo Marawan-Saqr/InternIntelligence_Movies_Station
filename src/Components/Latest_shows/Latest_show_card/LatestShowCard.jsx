@@ -16,7 +16,7 @@ const LatestShowCard = ({ show }) => {
             style={{ objectFit: "cover", borderRadius: "8px" }}
           />
         </div>
-        <div className="show-content text-center">
+        <div className="movie-content text-center">
           <h5 style={{ fontWeight: "bold" }}>{show.title}</h5>
           <p>{show.release_date}</p>
         </div>
