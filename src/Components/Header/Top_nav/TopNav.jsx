@@ -9,7 +9,7 @@ const TopNav = () => {
   const links = [
     { name: "home", path: "/" },
     { name: "about", path: "/about" },
-    { name: "movies", path: "/movies" },
+    { name: "movies", path: "/movies-page" },
   ];
   const [activeLink, setActiveLink] = useState(null);
 
