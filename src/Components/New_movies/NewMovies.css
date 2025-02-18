@@ -1,0 +1,7 @@
+.new-movies .container {
+  position: relative;
+  z-index: 3;
+  top: -22px;
+  background-color: #fff;
+  padding-top: 20px;
+}

@@ -21,3 +21,8 @@ body {
   color: var(--marvel) !important;
   border-bottom: 4px solid var(--marvel);
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
