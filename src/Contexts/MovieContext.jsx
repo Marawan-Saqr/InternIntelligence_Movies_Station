@@ -9,6 +9,7 @@ const MovieContextProvider = ({ children }) => {
 
   // Component States
   const [movies, setMovies] = useState([]);
+  const [shows, setShows] = useState([]);
   const [loading, setLoading] = useState(true);
 
 
@@ -20,13 +21,22 @@ const MovieContextProvider = ({ children }) => {
   }
 
 
+  // Get All TV Shows
+  const getAllShows = async () => {
+    const response = await axios.get("https://api.themoviedb.org/3/tv/popular?api_key=cc77dc99cfe3060cfe5410df352d4c7d&language=en");
+    setShows(response.data.results);
+    setLoading(false);
+  }
+
+
   useEffect(()=> {
     getAllMovies();
+    getAllShows();
   }, [])
 
 
   return (
-    <movieContext.Provider value={{ movies, loading }}>
+    <movieContext.Provider value={{ movies, shows, loading }}>
       {children}
     </movieContext.Provider>
   )
