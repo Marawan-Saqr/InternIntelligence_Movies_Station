@@ -6,7 +6,7 @@ import "./UpcomingMoviesCard.css";
 
 const UpcomingMoviesCard = ({ up }) => {
   return (
-    <div className="show">
+    <div className="show mb-3">
       <Link to={`/show-details/${up.id}`}>
         <div className="card">
           <img

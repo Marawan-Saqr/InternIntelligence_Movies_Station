@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useLocation } from 'react';
 import { movieContext } from '../../Contexts/MovieContext.jsx';
 import { Container, Row, Col } from 'react-bootstrap';
 import NewMoviesCard from '../../Components/New_movies/New_movies_card/NewMoviesCard.jsx';
@@ -10,7 +10,12 @@ import Loading from '../../Components/Loading/Loading.jsx';
 const NewMovies = () => {
 
   // Component States
-  const { movies, loading } = useContext(movieContext);
+  const { movies, loading, getPage } = useContext(movieContext);
+
+  // Load Movies First Page When Come To Home Page
+  useEffect(()=> {
+    getPage(1);
+  }, [])
 
   if (loading) {
     return <Loading />

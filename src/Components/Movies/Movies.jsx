@@ -4,6 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import MoviesCard from '../../Components/Movies/Movies_card/MoviesCard.jsx';
 import './Movies.css';
 import Loading from '../../Components/Loading/Loading.jsx';
+import PaginationComp from '../Paginate_comp/PaginateComp.jsx';
 
 
 const Movies = () => {
@@ -25,6 +26,7 @@ const Movies = () => {
             </Col>
           )))}
         </Row>
+        <PaginationComp />
       </Container>
     </div>
   )
