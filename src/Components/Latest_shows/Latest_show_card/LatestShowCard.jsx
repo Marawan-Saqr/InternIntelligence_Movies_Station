@@ -6,7 +6,7 @@ import "./LatestShowCard.css";
 
 const LatestShowCard = ({ show }) => {
   return (
-    <div className="show">
+    <div className="show mb-3">
       <Link to={`/show-details/${show.id}`}>
         <div className="card">
           <img

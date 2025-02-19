@@ -6,7 +6,7 @@ import "./MoviesCard.css";
 
 const MoviesCard = ({ movie }) => {
   return (
-    <div className="show">
+    <div className="show mb-3">
       <Link to={`/show-details/${movie.id}`}>
         <div className="card">
           <img
@@ -16,7 +16,7 @@ const MoviesCard = ({ movie }) => {
             style={{ objectFit: "cover", borderRadius: "8px" }}
           />
         </div>
-        <div className="show-content text-center">
+        <div className="movie-content text-center">
           <h5 style={{ fontWeight: "bold" }}>{movie.title}</h5>
           <p>{movie.release_date}</p>
         </div>

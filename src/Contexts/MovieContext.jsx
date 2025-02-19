@@ -47,6 +47,14 @@ const MovieContextProvider = ({ children }) => {
   }
 
 
+  // Pagination Function
+  const getPage = async (page) => {
+    const response = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=cc77dc99cfe3060cfe5410df352d4c7d&language=en&page=${page}`);
+    setMovies(response.data.results);
+    setLoading(false);
+  }
+
+
   // UseEffect
   useEffect(()=> {
     getAllMovies();
@@ -57,7 +65,7 @@ const MovieContextProvider = ({ children }) => {
 
 
   return (
-    <movieContext.Provider value={{ movies, shows, marvel, upcoming, loading }}>
+    <movieContext.Provider value={{ movies, shows, marvel, upcoming, loading, getPage }}>
       {children}
     </movieContext.Provider>
   )
