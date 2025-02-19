@@ -1,9 +1,9 @@
 import { useContext } from 'react';
-import { movieContext } from '../../Contexts/MovieContext.jsx';
+import { movieContext } from '../../../Contexts/MovieContext.jsx';
 import { Container, Row, Col } from 'react-bootstrap';
-import UpcomingMoviesCard from '../../Components/Upcoming_movies/Upcoming_movies_card/UpcomingMoviesCard.jsx';
+import UpcomingMoviesCard from '../../Home/Upcoming_movies/Upcoming_movies_card/UpcomingMoviesCard.jsx';
 import './UpcomingMovies.css';
-import Loading from '../../Components/Loading/Loading.jsx';
+import Loading from '../../../Components/Loading/Loading.jsx';
 
 
 
