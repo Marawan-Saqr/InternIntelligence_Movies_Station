@@ -1,0 +1,8 @@
+.details-back-image h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.details-back-image h4 span {
+  color: var(--marvel);
+}
