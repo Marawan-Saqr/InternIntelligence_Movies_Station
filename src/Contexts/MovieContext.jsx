@@ -55,6 +55,21 @@ const MovieContextProvider = ({ children }) => {
   }
 
 
+  // Search Function
+  const searchWord = async (word) => {
+    if (word === "") {
+      getAllMovies();
+    } else {
+      const response = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=cc77dc99cfe3060cfe5410df352d4c7d&query=${word}&language=en`);
+      const filteredMovies = response.data.results.filter((movie)=> {
+        return movie.title.toLowerCase().startsWith(word.toLowerCase());
+      })
+      setMovies(filteredMovies);
+      setLoading(false);
+    }
+  }
+
+
   // UseEffect
   useEffect(()=> {
     getAllMovies();
@@ -65,7 +80,7 @@ const MovieContextProvider = ({ children }) => {
 
 
   return (
-    <movieContext.Provider value={{ movies, shows, marvel, upcoming, loading, getPage }}>
+    <movieContext.Provider value={{ movies, shows, marvel, upcoming, loading, getPage, searchWord }}>
       {children}
     </movieContext.Provider>
   )

@@ -7,7 +7,7 @@ import "./UpcomingMoviesCard.css";
 const UpcomingMoviesCard = ({ up }) => {
   return (
     <div className="show mb-3">
-      <Link to={`/show-details/${up.id}`}>
+      <Link to={`/movies-page/movie-details/${up.id}`}>
         <div className="card">
           <img
             src={`https://image.tmdb.org/t/p/w500/${up.poster_path}`}

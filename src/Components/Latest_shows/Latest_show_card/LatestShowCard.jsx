@@ -7,7 +7,7 @@ import "./LatestShowCard.css";
 const LatestShowCard = ({ show }) => {
   return (
     <div className="show mb-3">
-      <Link to={`/show-details/${show.id}`}>
+      <Link to={`/movies-page/movie-details/${show.id}`}>
         <div className="card">
           <img
             src={`https://image.tmdb.org/t/p/w500/${show.poster_path}`}
