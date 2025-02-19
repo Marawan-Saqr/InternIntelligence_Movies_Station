@@ -43,6 +43,10 @@
   -o-transition: 0.3s;
 }
 
+body.darkMode .show .movie-content h5 {
+  color: #fff;
+}
+
 .show:hover .movie-content h5 {
   color: var(--marvel);
   transition: 0.3s;
@@ -51,6 +55,11 @@
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
 }
+
+body.darkMode .show:hover .movie-content h5 {
+  color: var(--marvel);
+}
+
 
 .show .movie-content p {
   font-size: 10px;

@@ -5,3 +5,7 @@
   background-color: #fff;
   padding-top: 20px;
 }
+
+body.darkMode .new-movies .container {
+  background-color: transparent;
+}

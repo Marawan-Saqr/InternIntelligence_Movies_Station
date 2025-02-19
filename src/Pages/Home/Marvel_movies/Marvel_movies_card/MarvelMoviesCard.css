@@ -43,6 +43,10 @@
   -o-transition: 0.3s;
 }
 
+body.darkMode .show .marv-content h5 {
+  color: #fff;
+}
+
 .show:hover .marv-content h5 {
   color: var(--marvel);
   transition: 0.3s;
@@ -50,6 +54,10 @@
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
+}
+
+body.darkMode .show:hover .marv-content h5 {
+  color: var(--marvel);
 }
 
 .show .marv-content p {
