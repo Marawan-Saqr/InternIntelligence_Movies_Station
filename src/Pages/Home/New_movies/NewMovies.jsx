@@ -1,9 +1,9 @@
-import { useContext, useEffect, useLocation } from 'react';
-import { movieContext } from '../../Contexts/MovieContext.jsx';
+import { useContext, useEffect } from 'react';
+import { movieContext } from '../../../Contexts/MovieContext.jsx';
 import { Container, Row, Col } from 'react-bootstrap';
-import NewMoviesCard from '../../Components/New_movies/New_movies_card/NewMoviesCard.jsx';
+import NewMoviesCard from '../../Home/New_movies/New_movies_card/NewMoviesCard.jsx';
 import './NewMovies.css';
-import Loading from '../../Components/Loading/Loading.jsx';
+import Loading from '../../../Components/Loading/Loading.jsx';
 
 
 

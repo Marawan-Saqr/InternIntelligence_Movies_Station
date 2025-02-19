@@ -16,7 +16,6 @@ const TopLogo = () => {
             navbarScroll
           >
           </Nav>
-          <img src="./logo.webp" />
         </Navbar.Collapse>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
