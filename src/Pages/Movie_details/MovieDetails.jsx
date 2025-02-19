@@ -3,8 +3,10 @@ import { useContext, useEffect } from "react";
 import { movieContext } from "../../Contexts/MovieContext.jsx";
 import Loading from "../../Components/Loading/Loading.jsx";
 import "./MovieDetails.css";
-import {Container} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import DetailsCover from './Details_cover/DetailsCover.jsx';
+import DetailsBackImage from './Details_back_image/DetailsBackImage.jsx';
+import DetailsInformation from './Details_information/DetailsInformation.jsx';
+import { Container } from 'react-bootstrap';
 
 const MovieDetails = () => {
   // Component States
@@ -22,19 +24,13 @@ const MovieDetails = () => {
   return (
     <div className="movie-details">
       {details ? (
-        <div className="cover">
+        <div>
+          <DetailsCover details={details} />
+          <DetailsBackImage details={details} />
           <Container>
-            <div className="content">
-              <h2>
-                {details.title}
-              </h2>
-              <p>
-                Series : {details.belongs_to_collection ? details.belongs_to_collection.name : "No Series"}
-              </p>
-              <button className="me-2"><a target="_blank" href={details.homepage}>Show Original Page</a></button>
-              <button><Link to={"/movies-page"}>All Movies</Link></button>
-            </div>
+            <hr style={{border: '2px solid red'}} />
           </Container>
+          <DetailsInformation details={details} />
         </div>
       ) : (
         <h2 className="text-center">No Data Found</h2>
