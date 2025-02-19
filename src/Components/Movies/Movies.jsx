@@ -5,6 +5,7 @@ import MoviesCard from '../../Components/Movies/Movies_card/MoviesCard.jsx';
 import './Movies.css';
 import Loading from '../../Components/Loading/Loading.jsx';
 import PaginationComp from '../Paginate_comp/PaginateComp.jsx';
+import Search from '../Search/Search.jsx';
 
 
 const Movies = () => {
@@ -19,8 +20,9 @@ const Movies = () => {
   return (
     <div className='movies mt-5'>
       <Container>
+        <Search />
         <Row>
-          {movies.length === 0 ? (<h2>No Data For Now</h2>) : (movies.map((movie)=> (
+          {movies.length === 0 ? (<h2>No Movies Found</h2>) : (movies.map((movie)=> (
             <Col xs={4} sm={4} md={3} lg={2} key={movie.id}>
               <MoviesCard movie={ movie } />
             </Col>
