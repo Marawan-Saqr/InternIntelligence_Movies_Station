@@ -7,6 +7,8 @@ import DetailsCover from './Details_cover/DetailsCover.jsx';
 import DetailsBackImage from './Details_back_image/DetailsBackImage.jsx';
 import DetailsInformation from './Details_information/DetailsInformation.jsx';
 import { Container } from 'react-bootstrap';
+import DetailsImages from './Details_images/DetailsImages.jsx';
+import RelatedMovies from './Related_movies/RelatedMovies.jsx';
 
 const MovieDetails = () => {
   // Component States
@@ -31,6 +33,8 @@ const MovieDetails = () => {
             <hr style={{border: '2px solid red'}} />
           </Container>
           <DetailsInformation details={details} />
+          <DetailsImages details={details} />
+          <RelatedMovies />
         </div>
       ) : (
         <h2 className="text-center">No Data Found</h2>

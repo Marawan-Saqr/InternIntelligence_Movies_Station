@@ -14,6 +14,7 @@ const MovieContextProvider = ({ children }) => {
   const [upcoming, setUpcoming] = useState([]);
   const [loading, setLoading] = useState(true);
   const [details, setDetails] = useState(null);
+  const [related, setRelated] = useState(null);
 
 
   // Get All Movies
@@ -78,6 +79,13 @@ const MovieContextProvider = ({ children }) => {
     setLoading(false);
   }
 
+  // Get Related Movies By ID
+  const getRelatedMovies = async (movieID) => {
+    const response = await axios.get(`https://api.themoviedb.org/3/movie/${movieID}/similar?api_key=cc77dc99cfe3060cfe5410df352d4c7d&language=en`);
+    setRelated(response.data.results);
+    setLoading(false);
+  }
+
 
   // UseEffect
   useEffect(()=> {
@@ -89,7 +97,7 @@ const MovieContextProvider = ({ children }) => {
 
 
   return (
-    <movieContext.Provider value={{ movies, shows, marvel, upcoming, loading, getPage, searchWord, details, getMovieDetails }}>
+    <movieContext.Provider value={{ movies, shows, marvel, upcoming, loading, getPage, searchWord, details, related, getRelatedMovies, getMovieDetails }}>
       {children}
     </movieContext.Provider>
   )
