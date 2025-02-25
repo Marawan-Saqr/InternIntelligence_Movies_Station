@@ -4,7 +4,7 @@ import "./DetailsInformation.css";
 
 const DetailsInformation = ({ details }) => {
   return (
-    <div className="details-information">
+    <div className="details-information mt-5 mb-5">
       <Container>
         <Row className="justify-content-between">
           <Col lg={6}>
