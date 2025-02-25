@@ -1,0 +1,8 @@
+.actors h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.actors h4 span {
+  color: var(--marvel);
+}

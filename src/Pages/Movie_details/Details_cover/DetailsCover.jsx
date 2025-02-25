@@ -4,9 +4,6 @@ import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const DetailsCover = ({ details }) => {
-
-  console.log(details.poster_path);
-
   return (
     <div>
       <div className="cover" style={{backgroundImage: `url("https://image.tmdb.org/t/p/w500/${details.backdrop_path}")`}}>

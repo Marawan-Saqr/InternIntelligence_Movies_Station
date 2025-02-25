@@ -14,7 +14,8 @@ const MovieContextProvider = ({ children }) => {
   const [upcoming, setUpcoming] = useState([]);
   const [loading, setLoading] = useState(true);
   const [details, setDetails] = useState(null);
-  const [related, setRelated] = useState(null);
+  const [related, setRelated] = useState([]);
+  const [actors, setActors] = useState([]);
 
 
   // Get All Movies
@@ -73,6 +74,14 @@ const MovieContextProvider = ({ children }) => {
   }
 
 
+  // Get Actors Of Movies By ID
+  const getActors = async (movieID) => {
+    const response = await axios.get(`https://api.themoviedb.org/3/movie/${movieID}/credits?api_key=cc77dc99cfe3060cfe5410df352d4c7d&language=en`);
+    setActors(response.data.cast);
+    setLoading(false);
+  }
+
+
   // UseEffect
   useEffect(()=> {
     getAllMovies();
@@ -83,7 +92,7 @@ const MovieContextProvider = ({ children }) => {
 
 
   return (
-    <movieContext.Provider value={{ movies, shows, marvel, upcoming, loading, getPage, details, related, getRelatedMovies, getMovieDetails }}>
+    <movieContext.Provider value={{ movies, shows, marvel, upcoming, loading, getPage, details, related, getRelatedMovies, getMovieDetails, actors, getActors }}>
       {children}
     </movieContext.Provider>
   )

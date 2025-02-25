@@ -9,6 +9,8 @@ import DetailsInformation from './Details_information/DetailsInformation.jsx';
 import { Container } from 'react-bootstrap';
 import DetailsImages from './Details_images/DetailsImages.jsx';
 import RelatedMovies from './Related_movies/RelatedMovies.jsx';
+import Actors from './Actors/Actors.jsx';
+
 
 const MovieDetails = () => {
   // Component States
@@ -35,6 +37,7 @@ const MovieDetails = () => {
           <DetailsInformation details={details} />
           <DetailsImages details={details} />
           <RelatedMovies />
+          <Actors />
         </div>
       ) : (
         <h2 className="text-center">No Data Found</h2>

@@ -1,0 +1,16 @@
+.actor-card .profile img {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.actor-card .profile-data h5 {
+  margin: 0px;
+  font-size: 15px;
+}
+
+.actor-card .profile-data h5 span {
+  color: var(--marvel);
+}
