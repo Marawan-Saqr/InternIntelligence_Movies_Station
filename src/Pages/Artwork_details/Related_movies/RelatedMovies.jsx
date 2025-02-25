@@ -9,13 +9,13 @@ import { Col, Row, Container } from "react-bootstrap";
 const RelatedMovies = () => {
   // Component States
   const { related, getRelatedMovies, loading } = useContext(movieContext);
-  const { MOVIEID } = useParams();
+  const { ARTWORKID } = useParams();
 
   useEffect(() => {
-    if (MOVIEID) {
-      getRelatedMovies(MOVIEID);
+    if (ARTWORKID) {
+      getRelatedMovies(ARTWORKID);
     }
-  }, [MOVIEID]);
+  }, [ARTWORKID]);
 
   // Loading
   if (loading) {

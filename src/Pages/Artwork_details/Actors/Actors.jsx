@@ -9,14 +9,14 @@ import './Actors.css';
 const Actors = () => {
 
   // Component States
-  const { MOVIEID } = useParams();
+  const { ARTWORKID } = useParams();
   const { actors, getActors } = useContext(movieContext);
 
 
   // UseEffect
   useEffect(()=> {
-    getActors(MOVIEID)
-  }, [MOVIEID])
+    getActors(ARTWORKID)
+  }, [ARTWORKID])
 
 
   return (
