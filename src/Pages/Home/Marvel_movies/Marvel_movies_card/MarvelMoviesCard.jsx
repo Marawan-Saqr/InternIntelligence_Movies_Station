@@ -5,7 +5,7 @@ import "./MarvelMoviesCard.css";
 const MarvelMoviesCard = ({ marv }) => {
   return (
     <div className="show mb-3">
-      <Link to={`/movies-page/movie-details/${marv.id}`}>
+      <Link to={`/movies-page/artwork-details/${marv.id}`}>
         <div className="card">
           <img
             src={`https://image.tmdb.org/t/p/w500/${marv.poster_path}`}

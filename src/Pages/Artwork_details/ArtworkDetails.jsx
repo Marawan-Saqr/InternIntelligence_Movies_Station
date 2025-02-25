@@ -12,14 +12,14 @@ import RelatedMovies from './Related_movies/RelatedMovies.jsx';
 import Actors from './Actors/Actors.jsx';
 
 
-const MovieDetails = () => {
+const ArtworkDetails = () => {
   // Component States
   const { details, getMovieDetails, loading } = useContext(movieContext);
   const params = useParams();
 
   useEffect(() => {
-    getMovieDetails(params.MOVIEID);
-  }, [params.MOVIEID]);
+    getMovieDetails(params.ARTWORKID);
+  }, [params.ARTWORKID]);
 
   if (loading) {
     return <Loading />;
@@ -46,4 +46,4 @@ const MovieDetails = () => {
   );
 };
 
-export default MovieDetails;
+export default ArtworkDetails;
