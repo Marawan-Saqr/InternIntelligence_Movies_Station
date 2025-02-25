@@ -1,0 +1,8 @@
+.related-movies-container h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.related-movies-container h4 span {
+  color: var(--marvel);
+}

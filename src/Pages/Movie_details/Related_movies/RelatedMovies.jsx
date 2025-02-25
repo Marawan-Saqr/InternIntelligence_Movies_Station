@@ -2,41 +2,43 @@ import { useParams } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { movieContext } from "../../../Contexts/MovieContext.jsx";
 import Loading from "../../../Components/Loading/Loading.jsx";
-import './RelatedMovies.css';
+import "./RelatedMovies.css";
+import RelatedMoviesCard from "./Related_movies_card/RelatedMoviesCard.jsx";
+import { Col, Row, Container } from "react-bootstrap";
 
 const RelatedMovies = () => {
+  // Component States
   const { related, getRelatedMovies, loading } = useContext(movieContext);
-  const { MOVIEID } = useParams(); // استخدام الت destructuring لتحسين الوضوح
+  const { MOVIEID } = useParams();
 
   useEffect(() => {
-    if (MOVIEID) { 
+    if (MOVIEID) {
       getRelatedMovies(MOVIEID);
     }
-  }, [MOVIEID]); // تحديث عند تغيير ID الفيلم
+  }, [MOVIEID]);
 
+  // Loading
   if (loading) {
     return <Loading />;
   }
 
-  // تحقق من أن هناك أفلام ذات صلة
   if (!related || related.length === 0) {
     return <h3 className="text-center text-muted">No Related Movies Found</h3>;
   }
 
   return (
-    <div className="related-movies-container">
-      <h2 className="section-title">Related Movies</h2>
+    <div className="related-movies-container mt-5 mb-5">
       <div className="related-movies-grid">
-        {related.map((movie) => (
-          <div key={movie.id} className="movie-card">
-            <img 
-              src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} 
-              alt={movie.title} 
-              className="movie-poster"
-            />
-            <h5>{movie.title}</h5>
-          </div>
-        ))}
+        <Container>
+          <h4 className="section-title">Related <span>Movies</span></h4>
+          <Row>
+            {related.map((movie) => (
+              <Col xs={4} sm={4} md={3} lg={2} key={movie.id}>
+                <RelatedMoviesCard movie={movie} />
+              </Col>
+            ))}
+          </Row>
+        </Container>
       </div>
     </div>
   );
