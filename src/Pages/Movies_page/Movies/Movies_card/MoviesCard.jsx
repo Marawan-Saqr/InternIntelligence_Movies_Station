@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./MoviesCard.css";
 
-
-
 const MoviesCard = ({ movie }) => {
   return (
     <div className="show mb-3">

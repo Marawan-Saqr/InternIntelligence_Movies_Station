@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { movieContext } from '../../../Contexts/MovieContext.jsx';
 import { Container, Row, Col } from 'react-bootstrap';
 import LatestShowCard from '../../../Pages/Home/Latest_shows/Latest_show_card/LatestShowCard.jsx';
@@ -10,11 +10,16 @@ import Loading from '../../../Components/Loading/Loading.jsx';
 const LatestShow = () => {
 
   // Component States
-  const { shows, loading } = useContext(movieContext);
+  const { shows, loading, getPageShows } = useContext(movieContext);
 
   if (loading) {
     return <Loading />
   }
+
+  // UseEffect
+  useEffect(()=> {
+    getPageShows(1);
+  }, [])
 
   return (
     <div className='new-shows mt-5'>
