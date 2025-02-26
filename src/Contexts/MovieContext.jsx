@@ -50,10 +50,18 @@ const MovieContextProvider = ({ children }) => {
   }
 
 
-  // Pagination Function
+  // Pagination Function For Movies
   const getPage = async (page) => {
     const response = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=cc77dc99cfe3060cfe5410df352d4c7d&language=en&page=${page}`);
     setMovies(response.data.results);
+    setLoading(false);
+  }
+
+
+  // Pagination Function For Tv-show
+  const getPageShows = async (page) => {
+    const response = await axios.get(`https://api.themoviedb.org/3/tv/popular?api_key=cc77dc99cfe3060cfe5410df352d4c7d&language=en&page=${page}`);
+    setShows(response.data.results);
     setLoading(false);
   }
 
@@ -92,7 +100,7 @@ const MovieContextProvider = ({ children }) => {
 
 
   return (
-    <movieContext.Provider value={{ movies, shows, marvel, upcoming, loading, getPage, details, related, getRelatedMovies, getMovieDetails, actors, getActors }}>
+    <movieContext.Provider value={{ movies, shows, marvel, upcoming, loading, getPage, details, related, getRelatedMovies, getMovieDetails, actors, getActors, getPageShows }}>
       {children}
     </movieContext.Provider>
   )

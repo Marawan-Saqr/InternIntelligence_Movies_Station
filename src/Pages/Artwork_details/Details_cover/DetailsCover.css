@@ -1,5 +1,4 @@
 .cover {
-  
   height: 60vh;
   background-size: cover;
   position: relative;
@@ -40,7 +39,7 @@
   font-weight: bold;
 }
 
-.cover .content button {
+.cover button {
   background-color: var(--marvel);
   color: #fff !important;
   padding: 5px 20px;

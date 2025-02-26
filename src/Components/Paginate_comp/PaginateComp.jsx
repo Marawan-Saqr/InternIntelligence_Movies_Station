@@ -1,22 +1,28 @@
 import { useContext, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 import { movieContext } from '../../Contexts/MovieContext';
+import { useLocation } from 'react-router-dom';
 
 const PaginationComp = () => {
 
   // Component States
-  const { getPage } = useContext(movieContext);
+  const { getPage, getPageShows } = useContext(movieContext);
+  const location = useLocation();
 
-  // Set Movies To Page 1 When In And Out
+
+  // Set Movies & TV To Page 1 When In And Out
   useEffect(() => {
     getPage(1);
+    getPageShows(1);
   }, []);
+
 
   // Handle Page Number Click
   const handlePageClick = (data) => {
-    getPage(data.selected + 1);
+    location.pathname === "/movies-page" || location.pathname === "/movies-page/movies" ? getPage(data.selected + 1) : getPageShows(data.selected + 1) ;
   }
   const pageCount = 500;
+
 
   return (
     <ReactPaginate

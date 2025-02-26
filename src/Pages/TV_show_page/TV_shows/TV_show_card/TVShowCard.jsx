@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./LatestShowCard.css";
+import "./TVShowCard.css";
 
 
 
-const LatestShowCard = ({ show }) => {
+const TVShowCard = ({ show }) => {
   return (
-    <div className="show mb-3">
+    <div className="show mb-3 mt-5">
       <Link to={`/tv-show-page/artwork-details/${show.id}`}>
         <div className="card">
           <img
@@ -16,7 +16,7 @@ const LatestShowCard = ({ show }) => {
             style={{ objectFit: "cover", borderRadius: "8px" }}
           />
         </div>
-        <div className="movie-content text-center">
+        <div className="show-content text-center">
           <h5 style={{ fontWeight: "bold" }}>{show.name}</h5>
           <p>{show.release_date}</p>
         </div>
@@ -26,4 +26,4 @@ const LatestShowCard = ({ show }) => {
 };
 
 
-export default LatestShowCard;
+export default TVShowCard;
