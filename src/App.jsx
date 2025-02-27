@@ -10,6 +10,7 @@ import MoviesPage from "./Pages/Movies_page/MoviesPage.jsx";
 import Movies from "./Pages/Movies_page/Movies/Movies.jsx";
 import ArtworkDetails from "./Pages/Artwork_details/ArtworkDetails.jsx";
 import Watchlist from "./Components/Watchlist/Watchlist.jsx";
+import NotFound from './Components/Not_found/NotFound.jsx';
 import Footer from "./Components/Footer/Footer.jsx";
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
               />
             </Route>
             <Route path="/watchlist" element={<Watchlist />} />
+            <Route path="*" element={<NotFound />}  /> 
           </Routes>
           <Footer />
         </BrowserRouter>
