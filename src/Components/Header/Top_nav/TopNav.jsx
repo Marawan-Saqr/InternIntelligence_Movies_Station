@@ -10,7 +10,6 @@ const TopNav = () => {
     { name: "home", path: "/" },
     { name: "about", path: "/about" },
     { name: "movies", path: "/movies-page" },
-    { name: "tv-show", path: "/tv-show-page" },
     { name : "watclist", path: "/watchlist" }
   ];
   const [activeLink, setActiveLink] = useState(null);

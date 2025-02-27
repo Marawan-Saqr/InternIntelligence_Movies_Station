@@ -13,13 +13,12 @@ const PaginationComp = () => {
   // Set Movies & TV To Page 1 When In And Out
   useEffect(() => {
     getPage(1);
-    getPageShows(1);
   }, []);
 
 
   // Handle Page Number Click
   const handlePageClick = (data) => {
-    location.pathname === "/movies-page" || location.pathname === "/movies-page/movies" ? getPage(data.selected + 1) : getPageShows(data.selected + 1) ;
+    getPage(data.selected + 1);
   }
   const pageCount = 500;
 
