@@ -1,25 +1,27 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import Loader from '../../../Components/Loading/Loading.jsx';
-import { movieContext } from '../../../Contexts/MovieContext.jsx';
-import { useContext } from 'react';
+import { motion } from "framer-motion";
 import "./HomeCover.css";
 
 const HomeCover = () => {
-
-  // Component States
-  const { loading } = useContext(movieContext);
-
-
   return (
     <div className="home-cover">
-      {loading && <Loader />}
       <Container>
         <div className="content">
-          <h2>
+          <motion.h2 
+            initial={{ opacity: 0, y: -20 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }}
+          >
             Movies <span>Station</span>
-          </h2>
-          <p>Journey into the cosmic depths of the great cinematic movies!</p>
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 1, delay: 0.3 }}
+          >
+            Journey into the cosmic depths of the great cinematic movies!
+          </motion.p>
         </div>
       </Container>
     </div>
