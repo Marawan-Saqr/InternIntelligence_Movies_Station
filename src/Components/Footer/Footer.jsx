@@ -5,63 +5,33 @@ import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="footer bg-dark text-light py-4 mt-5">
       <Container>
-        <Row className='align-items-center'>
-          <Col lg={2}>
-            <div className="box">
-              <img src="./logo.webp" className='img-fluid' />
+        <Row className="align-items-center text-center text-lg-start">
+          <Col lg={3} className="mb-3 mb-lg-0">
+            <div className="footer-logo">
+              <img src="./logo.webp" alt="Logo" className='img-fluid' />
             </div>
           </Col>
-          <Col lg={2}>
-            <div className="box">
-              <ul>
-                <li><Link to={"/"}>Home</Link></li>
-                <li><Link to={"/about"}>About</Link></li>
-                <li><Link to={"/movies"}>Movies</Link></li>
-              </ul>
-            </div>
+          <Col lg={3} className="mb-3 mb-lg-0">
+            <h5 className="text-uppercase">Quick Links</h5>
+            <ul className="list-unstyled">
+              <li><Link to="/" className="text-light text-decoration-none">Home</Link></li>
+              <li><Link to="/about" className="text-light text-decoration-none">About</Link></li>
+              <li><Link to="/movies-page" className="text-light text-decoration-none">Movies</Link></li>
+              <li><Link to="/watchlist" className="text-light text-decoration-none">Watchlist</Link></li>
+            </ul>
           </Col>
-          <Col lg={2}>
-            <div className="box">
-              <ul>
-                <li><Link to={"/"}>Home</Link></li>
-                <li><Link to={"/about"}>About</Link></li>
-                <li><Link to={"/movies"}>Movies</Link></li>
-              </ul>
-            </div>
-          </Col>
-          <Col lg={2}>
-            <div className="box">
-              <ul>
-                <li><Link to={"/"}>Home</Link></li>
-                <li><Link to={"/about"}>About</Link></li>
-                <li><Link to={"/movies"}>Movies</Link></li>
-              </ul>
-            </div>
-          </Col>
-          <Col lg={2}>
-            <div className="box">
-              <ul>
-                <li><Link to={"/"}>Home</Link></li>
-                <li><Link to={"/about"}>About</Link></li>
-                <li><Link to={"/movies"}>Movies</Link></li>
-              </ul>
-            </div>
-          </Col>
-          <Col lg={2}>
-            <div className="box">
-              <ul>
-                <li><Link to={"/"}>Home</Link></li>
-                <li><Link to={"/about"}>About</Link></li>
-                <li><Link to={"/movies"}>Movies</Link></li>
-              </ul>
-            </div>
+        </Row>
+        <hr className="border-light" />
+        <Row>
+          <Col className="text-center">
+            <p className="mb-0">&copy; {new Date().getFullYear()} YourCompany. All Rights Reserved.</p>
           </Col>
         </Row>
       </Container>
     </footer>
-  )
-}
+  );
+};
 
 export default Footer;
